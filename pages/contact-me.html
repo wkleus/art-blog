@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../static/css/style-pages.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="container">
+    <header class="header">
+      <nav class="navbar">
+        <a href="../index.html">
+          <h1 class="heading-one">The Art Blogger</h1>
+        </a>
+        <ul class="pages-list">
+          <li><a href="../index.html">Home</a></li>
+          <li>
+            <a href="../pages/about-this-blog.html">About this Blog</a>
+          </li>
+          <li><a id="active" href="../pages/contact-me.html">Contact me</a></li>
+        </ul>
+      </nav>
+      <br />
+      <hr />
+    </header>
+
+    <sidebar class="about-me-sidebar">
+      <div class="about-me-container">
+        <img
+          src="../static/images/avatar.png"
+          alt="Me"
+          class="avatar"
+          title="Me"
+        />
+        <div>
+          <h3>MyName</h3>
+          <p>
+            Hey, I'm an <strong>Artist and Blogger</strong> for all kinds of
+            Art. Enjoy my <strong>Art Blog</strong> and give me Feedback!
+          </p>
+          <p>Email: fake@fake.email</p>
+        </div>
+      </div>
+      <br />
+      <div class="clock-container">
+        <div>
+          <strong><span id="hour">00</span></strong>
+          <span class="text">hr</span>
+        </div>
+        <div>
+          <strong><span id="minutes">00</span></strong>
+          <span class="text">min</span>
+        </div>
+        <div>
+          <strong><span id="seconds">00</span></strong>
+          <span class="text">sec</span>
+        </div>
+        <div>
+          <strong><span id="ampm">a.m.</span></strong>
+        </div>
+      </div>
+    </sidebar>
+
+    <main class="main">
+      <br />
+      <br />
+      <h2><u>Contact Me</u></h2>
+      <br />
+      <br />
+      <b>Address:</b>
+      <p>
+        <em>Art & Blogging GmbH</em>
+        <br />
+        123 Main Street
+        <br />
+        Anytown, Anycountry 12345
+      </p>
+      <br />
+      <b>Email:</b>
+      <br />
+      <br />
+      <form>
+        <input
+          type="email"
+          class="email-input"
+          placeholder="Enter email address"
+        />
+        <button class="button" type="submit">Subscribe</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <br />
+      <hr />
+      <div class="footer-note">@2023 Art & Blogging</div>
+    </footer>
+    <br />
+    <script src="../clock.js"></script>
+  </body>
+</html>

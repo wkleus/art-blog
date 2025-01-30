@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Blog</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="container">
+    <header class="header">
+      <nav class="navbar">
+        <a href="index.html">
+          <h1 class="heading-one">The Art Blogger</h1>
+        </a>
+        <h2 class="heading-two">Novels, Poems, Cinema and more</h2>
+        <ul class="pages-list">
+          <li><a id="active" href="index.html">Home</a></li>
+          <li><a href="pages/about-this-blog.html">About</a></li>
+          <li><a href="pages/contact-me.html">Contact</a></li>
+          <li>
+            <form id="search-form">
+              <input type="text" id="search-inp" placeholder="Enter word..." />
+              <button id="search-btn" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="sidebar">
+      <ul class="websites-list">
+        <li>
+          <figure>
+            <a href="https://github.com/source-code-examples" target="_blank">
+              <img
+                src="static/images/github.png"
+                alt="GitHub"
+                class="social-media-icon"
+              />
+              <figcaption>GitHub</figcaption>
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="https://www.instagram.com" target="_blank">
+              <img
+                src="static/images/instagram.png"
+                alt="instagram"
+                class="social-media-icon"
+              />
+              <figcaption>Instagram</figcaption>
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="https://www.facebook.com" target="_blank">
+              <img
+                src="static/images/facebook.png"
+                alt="facebook"
+                class="social-media-icon"
+              />
+              <figcaption>Facebook</figcaption>
+            </a>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <a href="https://www.youtube.com" target="_blank">
+              <img
+                src="static/images/youtube.png"
+                alt="youtube"
+                class="social-media-icon"
+              />
+              <figcaption>YouTube</figcaption>
+            </a>
+          </figure>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="main" id="articleList">
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/black-panther.png"
+            alt="Black panther"
+          />
+          <div class="card-content">
+            <h3>The Panther</h3>
+            <h4>In Jardin des Plantes, Paris</h4>
+            <p>
+              ... is a poem by <em>Rainer Maria Rilke</em>, written between 1902
+              and 1903. The event described in it was based on a panther that
+              Rilke saw during his visits to the Jardin des Plantes in Paris. It
+              is a touching poem with powerful images.
+            </p>
+            <button class="card-button">
+              <a href="pages/post-one.html">Read more</a>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/soldier-with-mask.png"
+            alt="Humanity"
+          />
+          <div class="card-content">
+            <h3>Humanity</h3>
+            <p>
+              ... is a poem by <em>Georg Trakl</em>. He describes the
+              hopelessness that befell him during the World War I. As a medical
+              Lieutenant, he had to care for numerous seriously wounded people
+              in the Battle of Gródek in September 1914, but was unable to save
+              their lives, which plunged him into deep despair.
+            </p>
+            <button class="card-button">
+              <a href="pages/post-two.html">Read more</a>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/question.png"
+            alt="Quiz Game"
+          />
+          <div class="card-content">
+            <h3>Quiz Game</h3>
+            <p>
+              Let's play a quiz game! Who said the following:
+              <q>The people who are right a lot often change their minds.</q>?
+              Guess the answer!
+            </p>
+            <button class="card-button">
+              <a href="pages/post-three.html">Read the answer</a>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/army.png"
+            alt="All Quiet on the Western Front"
+          />
+          <div class="card-content">
+            <h3>All Quiet on the Western Front</h3>
+            <p>
+              ... is a German movie based on the 1929 novel of the same name by
+              <em>Erich Maria Remarque</em>. Set during World War I, it follows
+              the life of the young idealistic German soldier Paul Bäumer. But
+              when confronted with the bloody reality of war, he loses more and
+              more of his former hopes and ideals.
+            </p>
+            <button class="card-button">
+              <a href="pages/post-four.html">Watch the trailer</a>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/question.png"
+            alt="Quiz Game"
+          />
+          <div class="card-content">
+            <h3>Quiz Game</h3>
+            <p>
+              Let's play a quiz game! Who said the following:
+              <q
+                >Every person always has a germ within them that defines their
+                originality; every individual has their story.</q
+              >? Guess the answer!
+            </p>
+            <button class="card-button">
+              <a href="pages/post-five.html">Read the answer</a>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <div class="card">
+          <img
+            class="card-image"
+            src="static/images/figure-skater.png"
+            alt="Figure Skating"
+          />
+          <div class="card-content">
+            <h3>Art on Ice</h3>
+            <p>
+              The American figure skater Ilia Malinin made history at Skate
+              America, hitting a spectacular quadruple Axel on his way to a
+              stunning gold.
+            </p>
+            <button class="card-button">
+              <a href="pages/post-six.html">Watch his jump</a>
+            </button>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-note">Copyright © 2023 Art & Blogging</div>
+    </footer>
+    <br />
+    <script src="./search.js"></script>
+    <script src="./copyright-info.js"></script>
+  </body>
+</html>
