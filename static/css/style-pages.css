@@ -1,3 +1,4 @@
+@import "_variables.css";
 @import "header.css";
 @import "footer.css";
 
@@ -8,7 +9,7 @@ body {
     to top left,
     lightgray,
     gray,
-    rgb(153, 153, 20),
+    var(--color-accent),
     white,
     black
   );
@@ -16,9 +17,6 @@ body {
 
 .container {
   min-height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
-
   display: grid;
   grid-template-columns: 120px auto;
   grid-template-areas:
@@ -35,22 +33,21 @@ body {
 
 .about-me-container {
   text-align: center;
-  border-radius: 10%;
+  border-radius: var(--radius-card);
   width: 12rem;
-  box-shadow: 30px 20px 10px rgba(1, 13, 27, 0.9);
+  box-shadow: var(--shadow-card);
   max-height: 330px;
   margin: 25px;
   padding: 20%;
-  transition: transform 1.5s linear;
   font-size: 18px;
   letter-spacing: 1px;
-  transition: transform 1;
+  transition: transform var(--transition-slow);
 }
 
 .avatar {
   border-radius: 5%;
   width: 6rem;
-  box-shadow: 15px 10px 5px rgba(1, 13, 27, 0.9);
+  box-shadow: var(--shadow-avatar);
   max-height: 330px;
   margin: 1px;
   transition: transform 1.25s linear;
@@ -58,16 +55,12 @@ body {
 
 .avatar:hover {
   transform: scale3d(-1, 1, 2);
-
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  box-shadow: 30px 20px 30px rgba(1, 13, 27, 0.9);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .about-me-container:hover {
   transform: scale(1.2);
-
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  box-shadow: 30px 20px 30px rgba(1, 13, 27, 0.9);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .main {
@@ -94,7 +87,7 @@ h2 {
 }
 
 hr {
-  border: 1px solid rgb(115, 122, 47);
+  border: 1px solid var(--color-accent);
   opacity: 0.2;
   width: 60%;
   margin-top: auto;
@@ -110,24 +103,18 @@ hr {
   justify-content: center;
   background-color: transparent;
   border-width: 1px;
-  border-color: rgb(160, 160, 83);
-  border-radius: 10%;
+  border-color: var(--color-accent-light);
+  border-radius: var(--radius-card);
   cursor: pointer;
   font-size: 14px;
   height: 42px;
   width: 110px;
   margin: 2px;
-  /* overflow: hidden; */
   position: relative;
   text-align: center;
-
   padding: 10px 22px;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
 }
-
-/* .button:active {
-  transform: scale(0.96);
-} */
 
 .button:hover {
   font-weight: bold;
@@ -147,7 +134,8 @@ hr {
 
 .button:hover:before {
   top: -70%;
-  background-image: radial-gradient(circle, cyan 20%, transparent 20%),
+  background-image:
+    radial-gradient(circle, cyan 20%, transparent 20%),
     radial-gradient(
       circle,
       transparent 20%,
@@ -166,37 +154,70 @@ hr {
     radial-gradient(circle, rgb(181, 218, 211) 20%, transparent 20%),
     radial-gradient(circle, rgb(101, 241, 211) 20%, transparent 20%),
     radial-gradient(circle, rgb(116, 214, 168) 20%, transparent 20%);
-  background-size: 15% 15%, 25% 25%, 20% 20%, 25% 25%, 23% 23%, 15% 15%, 20% 20%,
-    15% 15%, 23% 23%;
+  background-size:
+    15% 15%,
+    25% 25%,
+    20% 20%,
+    25% 25%,
+    23% 23%,
+    15% 15%,
+    20% 20%,
+    15% 15%,
+    23% 23%;
   background-position: 50% 120%;
   animation: greentopBubbles 2s ease;
 }
 
 @keyframes greentopBubbles {
   0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
+    background-position:
+      5% 90%,
+      10% 90%,
+      10% 90%,
+      15% 90%,
+      25% 90%,
+      25% 90%,
+      40% 90%,
+      55% 90%,
+      70% 90%;
   }
-
   50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
+    background-position:
+      0% 80%,
+      0% 20%,
+      10% 40%,
+      20% 0%,
+      30% 30%,
+      22% 50%,
+      50% 50%,
+      65% 20%,
+      90% 30%;
   }
-
   100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    background-position:
+      0% 70%,
+      0% 10%,
+      10% 30%,
+      20% -10%,
+      30% 20%,
+      22% 40%,
+      50% 40%,
+      65% 10%,
+      90% 20%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
   }
 }
 
 .button:hover::after {
   bottom: -70%;
-  background-image: radial-gradient(
-      circle,
-      rgb(155, 233, 155) 20%,
-      transparent 20%
-    ),
+  background-image:
+    radial-gradient(circle, rgb(155, 233, 155) 20%, transparent 20%),
     radial-gradient(circle, rgb(129, 180, 129) 20%, transparent 20%),
     radial-gradient(
       circle,
@@ -208,26 +229,55 @@ hr {
     radial-gradient(circle, rgb(133, 168, 133) 20%, transparent 20%),
     radial-gradient(circle, cyan 20%, transparent 20%),
     radial-gradient(circle, rgb(186, 218, 186) 20%, transparent 20%);
-  background-size: 20% 20%, 25% 25%, 23% 23%, 25% 25%, 20% 20%, 25% 25%, 23% 23%;
+  background-size:
+    20% 20%,
+    25% 25%,
+    23% 23%,
+    25% 25%,
+    20% 20%,
+    25% 25%,
+    23% 23%;
   background-position: 50% 0%;
   animation: greenbottomBubbles 2s ease;
 }
 
 @keyframes greenbottomBubbles {
   0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
+    background-position:
+      10% -10%,
+      30% 10%,
+      55% -10%,
+      70% -10%,
+      85% -10%,
+      70% -10%,
+      70% 0%;
   }
-
   50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+    background-position:
+      0% 80%,
+      20% 80%,
+      45% 60%,
+      60% 100%,
+      75% 70%,
+      95% 60%,
       105% 0%;
   }
-
   100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+    background-position:
+      0% 90%,
+      20% 90%,
+      45% 70%,
+      60% 110%,
+      75% 80%,
+      95% 70%,
       110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
   }
 }
 
@@ -261,39 +311,29 @@ figcaption {
   background-color: rgb(32, 30, 30);
   color: white;
   font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
   padding: 3%;
+  text-align: center;
 }
 
 .clock-container {
   display: flex;
-
   text-align: center;
-  border-radius: 10%;
+  border-radius: var(--radius-card);
   width: 12rem;
-  box-shadow: 30px 20px 10px rgba(1, 13, 27, 0.9);
+  box-shadow: var(--shadow-card);
   max-height: 330px;
   margin-left: 25px;
   padding: 20%;
-  transition: transform 1.5s linear;
   font-size: 18px;
   letter-spacing: 1px;
-  transition: transform 1;
-
+  transition: transform var(--transition-slow);
   align-items: center;
   justify-content: center;
-  /* opacity: 0.8; */
-  /* margin-top: 8%; */
 }
 
 .clock-container:hover {
   transform: scale(1.2);
-
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  box-shadow: 30px 20px 30px rgba(1, 13, 27, 0.9);
-
-  opacity: 1;
+  box-shadow: var(--shadow-card-hover);
 }
 
 .clock-container div {
@@ -304,20 +344,16 @@ figcaption {
 .clock-container span {
   width: 35px;
   height: 30px;
-  /* background: linear-gradient(to top left, gray, rgb(153, 153, 20), white); */
-  /* background: transparent; */
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 .clock-container .text {
   height: 15px;
   font-size: 12px;
-  /* text-transform: uppercase; */
   letter-spacing: 1px;
   background: transparent;
 }
@@ -329,9 +365,6 @@ figcaption {
   height: 30px;
   font-size: 20px;
   text-transform: lowercase;
-  /* background: transparent; */
-  /* background: linear-gradient(to top left, gray, rgb(153, 153, 20), white); */
-  /* margin-left: 3px; */
   margin-top: 8px;
 }
 
@@ -339,19 +372,15 @@ figcaption {
   iframe {
     height: 300px;
   }
-
   figure {
     width: 400px;
   }
-
   #blog-heading {
     font-size: 34px;
   }
-
   h2 {
     font-size: 26px;
   }
-
   .about-me-sidebar {
     margin-left: 12%;
   }
@@ -361,50 +390,43 @@ figcaption {
   iframe {
     height: 200px;
   }
-
   figure {
     width: 280px;
     margin-left: 2px;
   }
-
   #blog-heading {
     font-size: 26px;
   }
-
   .about-me-container {
     margin: 5px;
     padding: 2%;
     font-size: 17px;
     letter-spacing: 0.5px;
   }
-
   .clock-container {
     margin: 5px;
     padding: 2%;
     font-size: 17px;
     letter-spacing: 0.5px;
   }
-
   .about-me-sidebar {
     margin-left: 3%;
     margin-right: 1%;
   }
+}
 
-  @media (max-width: 500px) {
-    .about-me-sidebar {
-      visibility: hidden;
-    }
-
-    .container {
-      grid-template-columns: 100%;
-      grid-template-areas:
-        "header"
-        "post"
-        "footer";
-
-      padding: 0;
-      align-items: center;
-      justify-items: center;
-    }
+@media (max-width: 500px) {
+  .about-me-sidebar {
+    visibility: hidden;
+  }
+  .container {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "post"
+      "footer";
+    padding: 0;
+    align-items: center;
+    justify-items: center;
   }
 }

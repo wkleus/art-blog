@@ -1,9 +1,7 @@
-/* sidebar styles*/
+/* sidebar styles */
 
 .sidebar {
   grid-area: sidebar;
-
-  /* the sidebar follows the page srcolling up and down */
   height: 25vh;
   position: -webkit-sticky;
   position: sticky;
@@ -22,7 +20,7 @@
 .websites-list li {
   margin-top: 30px;
   opacity: 0.5;
-  transition: transform 0.2s;
+  transition: transform var(--transition-fast);
 }
 
 .social-media-icon {

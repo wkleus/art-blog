@@ -1,5 +1,4 @@
-/* body styles */
-
+@import "_variables.css";
 @import "header.css";
 @import "sidebar.css";
 @import "main.css";
@@ -10,11 +9,10 @@ body {
     to top left,
     lightgray,
     gray,
-    rgb(153, 153, 20),
+    var(--color-accent),
     white,
     black
   );
-
   letter-spacing: 0.8px;
   font-size: 17px;
 }
@@ -34,7 +32,6 @@ body {
 @media (min-width: 375px) and (max-width: 500px) {
   .container {
     grid-template-rows: 10px 150px auto 40px 10px;
-
     grid-template-areas:
       ". . . ."
       "header header header header"
