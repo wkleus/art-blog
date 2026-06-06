@@ -1,5 +1,5 @@
 :root {
-  /* Akzentfarben (Olive-Gelb) */
+  /* Accent Colors (olive - yellow) */
   --color-accent: rgb(153, 153, 20);
   --color-accent-light: rgb(160, 160, 83);
   --color-accent-dark: rgb(131, 131, 24);
@@ -9,7 +9,7 @@
   --color-text-nav: rgb(116, 115, 115);
   --color-text-heading: rgb(48, 47, 47);
 
-  /* Schatten */
+  /* Shadow */
   --shadow-card: 30px 20px 10px rgba(1, 13, 27, 0.9);
   --shadow-card-hover: 30px 20px 30px rgba(1, 13, 27, 0.9);
   --shadow-content: 20px 30px 40px rgba(1, 13, 27, 0.9);

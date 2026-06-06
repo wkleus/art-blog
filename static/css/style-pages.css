@@ -1,6 +1,6 @@
 /* style-pages.css*/
 
-@import "./_variables.css";
+@import "./variables.css";
 @import "./header.css";
 @import "./footer.css";
 
