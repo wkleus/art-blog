@@ -1,8 +1,8 @@
-@import "./_variables.css";
-@import "./header.css";
-@import "./sidebar.css";
-@import "./main.css";
-@import "./footer.css";
+@import "static/css/_variables.css";
+@import "static/css/header.css";
+@import "static/css/sidebar.css";
+@import "static/css/main.css";
+@import "static/css/footer.css";
 
 body {
   background: linear-gradient(
